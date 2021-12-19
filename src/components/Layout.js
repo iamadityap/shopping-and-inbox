@@ -1,34 +1,35 @@
-import { Box, Grid, Toolbar } from "@mui/material";
+import { Toolbar } from "@mui/material";
+import { Box } from "@mui/system";
 import { Outlet } from "react-router-dom";
 import NavBar from "./NavBar";
 import Sidebar from "./Sidebar";
 
 function Layout() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        {/* App Navigation bar... */}
-        <Grid item>
-          <NavBar />
-        </Grid>
+    <>
+      {/* App Navigation bar... */}
+      <NavBar />
 
-        <Grid container spacing={2}>
-          {/* Sidebar Drawer Menu */}
-          <Grid item>
+      <Toolbar />
+      <Box sx={{ width: "100%", height: "100%" }}>
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "1fr 8fr",
+            gridTemplateRows: "auto",
+            gridTemplateAreas: `"sidebar main main main main"`,
+          }}
+        >
+          <Box className="sidebar-container" sx={{ gridArea: "sidebar" }}>
             <Sidebar />
-          </Grid>
+          </Box>
 
-          {/* main content */}
-          <Grid item>
-            <Toolbar />
-
-            <Box sx={{ width: "100%", height: "100%", mx: "auto", p: 2 }}>
-              <Outlet />
-            </Box>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Box>
+          <Box className="main-container" sx={{ gridArea: "main" }}>
+            <Outlet />
+          </Box>
+        </Box>
+      </Box>
+    </>
   );
 }
 

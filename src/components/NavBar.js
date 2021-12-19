@@ -6,6 +6,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { AppBar, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function NavBar({ onOpen }) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -44,12 +45,12 @@ function NavBar({ onOpen }) {
           </IconButton>
 
           <Menu id="account-menu" anchorEl={anchorEl} open={isProfileMenuOpen} onClose={handleProfileMenuClose}>
-            <MenuItem>
+            <MenuItem component={NavLink} to="/profile" onClick={handleProfileMenuClose}>
               <AccountBoxIcon aria-label="Profile" sx={{ mr: 2 }} />
               Profile
             </MenuItem>
 
-            <MenuItem>
+            <MenuItem onClick={handleProfileMenuClose}>
               <CallMissedOutgoingIcon aria-label="Log out" sx={{ mr: 2 }} />
               Log out
             </MenuItem>
