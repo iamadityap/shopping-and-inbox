@@ -10,7 +10,7 @@ function ProductCard() {
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>
-        <CardMedia component="img" height="175" image="assets/vintage-camera.jpeg" alt="Paella dish"></CardMedia>
+        <CardMedia component="img" height="175" image="assets/vintage-camera.jpeg" alt="Vintage Camera"></CardMedia>
         <CardContent>
           <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <Typography variant="body1" sx={{ fontWeight: "bold" }}>
