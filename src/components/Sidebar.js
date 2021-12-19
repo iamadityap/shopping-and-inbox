@@ -18,56 +18,28 @@ function Sidebar() {
       >
         <Toolbar />
         <List>
-          <ListItem
-            key="Dashboard"
-            component={NavLink}
-            to="/dashboard"
-            sx={{
-              color: "black",
-            }}
-          >
+          <ListItem key="Dashboard" component={NavLink} to="/dashboard">
             <ListItemIcon aria-label="Dashboard">
               <HomeIcon sx={{ mr: 2 }} />
             </ListItemIcon>
             <ListItemText primary="Dashboard" />
           </ListItem>
 
-          <ListItem
-            key="Shop"
-            component={NavLink}
-            to="/shop"
-            sx={{
-              color: "black",
-            }}
-          >
+          <ListItem key="Shop" component={NavLink} to="/shop">
             <ListItemIcon aria-label="Shop">
               <ShoppingCartIcon sx={{ mr: 2 }} />
             </ListItemIcon>
             <ListItemText primary="Shop" />
           </ListItem>
 
-          <ListItem
-            key="Profile"
-            component={NavLink}
-            to="/profile"
-            sx={{
-              color: "black",
-            }}
-          >
+          <ListItem key="Profile" component={NavLink} to="/profile">
             <ListItemIcon aria-label="Profile">
               <AccountBoxIcon sx={{ mr: 2 }} />
             </ListItemIcon>
             <ListItemText primary="Profile" />
           </ListItem>
 
-          <ListItem
-            key="Inbox"
-            component={NavLink}
-            to="/inbox"
-            sx={{
-              color: "black",
-            }}
-          >
+          <ListItem key="Inbox" component={NavLink} to="/inbox">
             <ListItemIcon aria-label="Inbox">
               <DraftsIcon sx={{ mr: 2 }} />
             </ListItemIcon>

@@ -43,7 +43,7 @@ function Mail({ isSelected = false, isFlagged = false, onSelect }) {
     <>
       <Grid container alignItems="center" justifyContent="flex-start" wrap="nowrap" sx={{ backgroundColor: isSelected ? "#e5e5e5" : "transparent" }}>
         <Grid item lg={3} container direction="row" alignItems="center" wrap="nowrap">
-          <Checkbox checked={isSelected} onClick={(event) => onSelect(event.target.checked)} />
+          <Checkbox color="secondary" checked={isSelected} onClick={(event) => onSelect(event.target.checked)} />
 
           <Button
             variant="text"
