@@ -14,7 +14,7 @@
     {
       "productId": "e302e1c4-fd52-4f5a-88e4-f7e0f919c44a",
       "productName": "Laptop Asuse 1302",
-      "productImage": "assets/vintage-camera.jpeg",
+      "productImage": "assets/arlo-wall-mount-camera.jpeg",
       "cpu_model": "CPU 2800 I7 Intel",
       "ram_model": "RAM 16 GB DDR4",
       "vga_model": "VGA 3200 6GB",
@@ -26,7 +26,7 @@
     {
       "productId": "83151d57-fb2c-4753-a483-1ebf5804e9d5",
       "productName": "Laptop Asuse 1302",
-      "productImage": "assets/canon-camera.png",
+      "productImage": "assets/vintage-camera.jpeg",
       "cpu_model": "CPU 2800 I7 Intel",
       "ram_model": "RAM 16 GB DDR4",
       "vga_model": "VGA 3200 6GB",
@@ -38,12 +38,96 @@
     {
       "productId": "de19e095-8736-4a06-9969-b6fb267035a0",
       "productName": "Laptop Asuse 1302",
-      "productImage": "assets/instax-camera.jpeg",
+      "productImage": "assets/canon-camera.png",
       "cpu_model": "CPU 2800 I7 Intel",
       "ram_model": "RAM 16 GB DDR4",
       "vga_model": "VGA 3200 6GB",
       "hdd_model": "HDD 1TB + 256GB SSD",
       "price": 74000,
+      "addedToCart": false,
+      "inStock": true
+    },
+    {
+      "productId": "85a8984d-8145-44d4-9713-436f77963352",
+      "productName": "Laptop Asuse 1302",
+      "productImage": "assets/instax-camera.jpeg",
+      "cpu_model": "CPU 2800 I7 Intel",
+      "ram_model": "RAM 16 GB DDR4",
+      "vga_model": "VGA 3200 6GB",
+      "hdd_model": "HDD 1TB + 256GB SSD",
+      "price": 64000,
+      "addedToCart": false,
+      "inStock": true
+    },
+    {
+      "productId": "b166c540-db96-4f1c-aeda-cb80ac6b4bf6",
+      "productName": "Laptop Asuse 1302",
+      "productImage": "assets/vintage-camera.jpeg",
+      "cpu_model": "CPU 2800 I7 Intel",
+      "ram_model": "RAM 16 GB DDR4",
+      "vga_model": "VGA 3200 6GB",
+      "hdd_model": "HDD 1TB + 256GB SSD",
+      "price": 71000,
+      "addedToCart": false,
+      "inStock": true
+    },
+    {
+      "productId": "03e413e0-258e-4c7f-a91b-7a3f4461048c",
+      "productName": "Laptop Asuse 1302",
+      "productImage": "assets/wall-mount-camera.jpeg",
+      "cpu_model": "CPU 2800 I7 Intel",
+      "ram_model": "RAM 16 GB DDR4",
+      "vga_model": "VGA 3200 6GB",
+      "hdd_model": "HDD 1TB + 256GB SSD",
+      "price": 85347,
+      "addedToCart": false,
+      "inStock": true
+    },
+    {
+      "productId": "4770581f-463a-4f1c-8188-81978c19a9db",
+      "productName": "Laptop Asuse 1302",
+      "productImage": "assets/canon-camera.png",
+      "cpu_model": "CPU 2800 I7 Intel",
+      "ram_model": "RAM 16 GB DDR4",
+      "vga_model": "VGA 3200 6GB",
+      "hdd_model": "HDD 1TB + 256GB SSD",
+      "price": 58352,
+      "addedToCart": false,
+      "inStock": true
+    },
+    {
+      "productId": "957b1e34-ec90-4404-8a56-4d370a78f7c9",
+      "productName": "Laptop Asuse 1302",
+      "productImage": "assets/instax-camera.jpeg",
+      "cpu_model": "CPU 2800 I7 Intel",
+      "ram_model": "RAM 16 GB DDR4",
+      "vga_model": "VGA 3200 6GB",
+      "hdd_model": "HDD 1TB + 256GB SSD",
+      "price": 54000,
+      "addedToCart": false,
+      "inStock": true
+    },
+    {
+      "productId": "83a2db46-2e8d-4953-a31c-280626892201",
+      "productName": "Laptop Asuse 1302",
+      "productImage": "assets/vintage-camera.jpeg",
+      "cpu_model": "CPU 2800 I7 Intel",
+      "ram_model": "RAM 16 GB DDR4",
+      "vga_model": "VGA 3200 6GB",
+      "hdd_model": "HDD 1TB + 256GB SSD",
+      "price": 42000,
+      "addedToCart": false,
+      "inStock": true
+    },
+    {
+      "productId": "d5639137-3219-404f-af19-5a5e46b5c888",
+      "productName": "Laptop Asuse 1302",
+      "productImage": "assets/wall-mount-camera.jpeg",
+      "cpu_model": "CPU 2800 I7 Intel",
+      "ram_model": "RAM 16 GB DDR4",
+      "vga_model": "VGA 3200 6GB",
+      "hdd_model": "HDD 1TB + 256GB SSD",
+      "price": 84555,
       "addedToCart": false,
       "inStock": true
     }
@@ -70,6 +154,158 @@
     },
     {
       "messageId": "d5639137-3219-404f-af19-5a5e46b5c888",
+      "fromFull": {
+        "email": "mauris.magna@protonmail.com",
+        "name": "Vance Bates"
+      },
+      "toFull": {
+        "email": "odio.aliquam@icloud.com",
+        "name": "Lionel Fry"
+      },
+      "subject": "Lorem ipsum, dolor",
+      "htmlBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "textBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "messageReceivedDate": "April 10 - 03:32 PM",
+      "isRead": false,
+      "isFlagged": false,
+      "isDeleted": false,
+      "isSelected": false
+    },
+    {
+      "messageId": "0faa29ee-88f8-42ea-a611-9eb56de5e218",
+      "fromFull": {
+        "email": "brad.gibson@example.com",
+        "name": "Brad Gibson"
+      },
+      "toFull": {
+        "email": "tara.chambers@example.com",
+        "name": "Tara Chambers"
+      },
+      "subject": "Lorem ipsum, dolor",
+      "htmlBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "textBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "messageReceivedDate": "May 08 - 09:32 AM",
+      "isRead": false,
+      "isFlagged": false,
+      "isDeleted": false,
+      "isSelected": false
+    },
+    {
+      "messageId": "1195a4cc-a26a-4eab-9026-a1ab64d33dd7",
+      "fromFull": {
+        "email": "mauris.magna@protonmail.com",
+        "name": "Vance Bates"
+      },
+      "toFull": {
+        "email": "odio.aliquam@icloud.com",
+        "name": "Lionel Fry"
+      },
+      "subject": "Lorem ipsum, dolor",
+      "htmlBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "textBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "messageReceivedDate": "April 10 - 15:32 PM",
+      "isRead": false,
+      "isFlagged": false,
+      "isDeleted": false,
+      "isSelected": false
+    },
+    {
+      "messageId": "e55967d0-8838-4cfd-ad47-9ee34af03dd9",
+      "fromFull": {
+        "email": "brad.gibson@example.com",
+        "name": "Brad Gibson"
+      },
+      "toFull": {
+        "email": "tara.chambers@example.com",
+        "name": "Tara Chambers"
+      },
+      "subject": "Lorem ipsum, dolor",
+      "htmlBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "textBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "messageReceivedDate": "July 15 - 09:32 AM",
+      "isRead": false,
+      "isFlagged": false,
+      "isDeleted": false,
+      "isSelected": false
+    },
+    {
+      "messageId": "e302e1c4-fd52-4f5a-88e4-f7e0f919c44a",
+      "fromFull": {
+        "email": "mauris.magna@protonmail.com",
+        "name": "Vance Bates"
+      },
+      "toFull": {
+        "email": "odio.aliquam@icloud.com",
+        "name": "Lionel Fry"
+      },
+      "subject": "Lorem ipsum, dolor",
+      "htmlBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "textBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "messageReceivedDate": "April 10 - 15:32 PM",
+      "isRead": false,
+      "isFlagged": false,
+      "isDeleted": false,
+      "isSelected": false
+    },
+    {
+      "messageId": "83151d57-fb2c-4753-a483-1ebf5804e9d5",
+      "fromFull": {
+        "email": "brad.gibson@example.com",
+        "name": "Brad Gibson"
+      },
+      "toFull": {
+        "email": "tara.chambers@example.com",
+        "name": "Tara Chambers"
+      },
+      "subject": "Lorem ipsum, dolor",
+      "htmlBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "textBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "messageReceivedDate": "July 15 - 09:32 AM",
+      "isRead": false,
+      "isFlagged": false,
+      "isDeleted": false,
+      "isSelected": false
+    },
+    {
+      "messageId": "de19e095-8736-4a06-9969-b6fb267035a0",
+      "fromFull": {
+        "email": "mauris.magna@protonmail.com",
+        "name": "Vance Bates"
+      },
+      "toFull": {
+        "email": "odio.aliquam@icloud.com",
+        "name": "Lionel Fry"
+      },
+      "subject": "Lorem ipsum, dolor",
+      "htmlBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "textBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "messageReceivedDate": "April 10 - 15:32 PM",
+      "isRead": false,
+      "isFlagged": false,
+      "isDeleted": false,
+      "isSelected": false
+    },
+    {
+      "messageId": "85a8984d-8145-44d4-9713-436f77963352",
+      "fromFull": {
+        "email": "brad.gibson@example.com",
+        "name": "Brad Gibson"
+      },
+      "toFull": {
+        "email": "tara.chambers@example.com",
+        "name": "Tara Chambers"
+      },
+      "subject": "Lorem ipsum, dolor",
+      "htmlBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "textBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "messageReceivedDate": "July 15 - 09:32 AM",
+      "isRead": false,
+      "isFlagged": false,
+      "isDeleted": false,
+      "isSelected": false
+    },
+    {
+      "messageId": "b166c540-db96-4f1c-aeda-cb80ac6b4bf6",
       "fromFull": {
         "email": "mauris.magna@protonmail.com",
         "name": "Vance Bates"

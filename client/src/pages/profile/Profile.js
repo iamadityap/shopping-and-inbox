@@ -10,7 +10,7 @@ function Profile() {
       <Grid container direction="row" alignItems="start" justifyContent="space-around" flexWrap="nowrap">
         <Grid item lg={3} container direction="column" alignItems="center" justifyContent="center" sx={{ p: 2 }}>
           <Avatar alt="Profile avatar placeholder" src="assets/avatar_icon.png" sx={{ width: 180, height: 180 }} />
-          <Button variant="contained" color="secondary" onClick={(event) => handleUploadImage()} sx={{ mr: 1 }}>
+          <Button variant="contained" color="secondary" onClick={(event) => handleUploadImage()} sx={{ mt: 1 }}>
             Upload Image
           </Button>
         </Grid>
