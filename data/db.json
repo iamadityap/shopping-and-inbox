@@ -19,7 +19,7 @@
       "ram_model": "RAM 16 GB DDR4",
       "vga_model": "VGA 3200 6GB",
       "hdd_model": "HDD 1TB + 256GB SSD",
-      "price": 97000,
+      "price": 84000,
       "addedToCart": false,
       "inStock": true
     },
@@ -31,7 +31,19 @@
       "ram_model": "RAM 16 GB DDR4",
       "vga_model": "VGA 3200 6GB",
       "hdd_model": "HDD 1TB + 256GB SSD",
-      "price": 84000,
+      "price": 97000,
+      "addedToCart": false,
+      "inStock": true
+    },
+    {
+      "productId": "de19e095-8736-4a06-9969-b6fb267035a0",
+      "productName": "Laptop Asuse 1302",
+      "productImage": "assets/instax-camera.jpeg",
+      "cpu_model": "CPU 2800 I7 Intel",
+      "ram_model": "RAM 16 GB DDR4",
+      "vga_model": "VGA 3200 6GB",
+      "hdd_model": "HDD 1TB + 256GB SSD",
+      "price": 74000,
       "addedToCart": false,
       "inStock": true
     }

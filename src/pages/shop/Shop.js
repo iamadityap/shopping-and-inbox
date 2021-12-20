@@ -15,7 +15,7 @@ const gridStyles = {
 
 function Shop() {
   const [products, setProducts] = useState([]);
-  const [sortOrder, setSortOrder] = useState(null);
+  const [sortOrder, setSortOrder] = useState("");
 
   useEffect(() => {
     fetchData("products")
@@ -26,18 +26,20 @@ function Shop() {
     };
   }, []);
 
-  function handleSort(sortOrder) {
-    setSortOrder(sortOrder);
+  function handleSort(order) {
+    setSortOrder(order);
     let items = [];
 
-    if (sortOrder === "low") {
+    if (order === "low") {
       items = products.sort((a, b) => {
         return parseFloat(a.price) - parseFloat(b.price);
       });
-    } else if (sortOrder === "high") {
+    } else if (order === "high") {
       items = products.sort((a, b) => {
         return parseFloat(b.price) - parseFloat(a.price);
       });
+    } else {
+      items = [...products];
     }
 
     setProducts(items);
