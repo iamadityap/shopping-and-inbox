@@ -1,6 +1,19 @@
 import { Avatar, Box, Button, FormControl, Grid, InputLabel, TextField } from "@mui/material";
+import { useEffect, useState } from "react";
+import { fetchData } from "../../utils/api-client";
 
 function Profile() {
+  const [userInfo, setUserInfo] = useState(null);
+
+  useEffect(() => {
+    fetchData("user")
+      .then((response) => setUserInfo(response))
+      .catch((error) => console.error(error));
+    return () => {
+      setUserInfo([]);
+    };
+  }, []);
+
   function handleUploadImage() {}
 
   function handleFormSave(event) {}
@@ -38,14 +51,28 @@ function Profile() {
               <InputLabel shrink htmlFor="fullname">
                 Full Name
               </InputLabel>
-              <TextField id="fullname" placeholder="Full Name" variant="outlined" autoComplete="off" sx={{ my: 2 }} />
+              <TextField
+                id="fullname"
+                value={userInfo?.usernameFull?.fullName || ""}
+                placeholder="Full Name"
+                variant="outlined"
+                autoComplete="off"
+                sx={{ my: 2 }}
+              />
             </FormControl>
 
             <FormControl variant="outlined" sx={{ mt: 2 }}>
               <InputLabel shrink htmlFor="useremail">
                 Email Address
               </InputLabel>
-              <TextField id="useremail" placeholder="example@domain.com" variant="outlined" autoComplete="off" sx={{ my: 2 }} />
+              <TextField
+                id="useremail"
+                value={userInfo?.emailAddress || ""}
+                placeholder="example@domain.com"
+                variant="outlined"
+                autoComplete="off"
+                sx={{ my: 2 }}
+              />
             </FormControl>
 
             <FormControl variant="outlined" sx={{ mt: 2 }}>
@@ -54,6 +81,7 @@ function Profile() {
               </InputLabel>
               <TextField
                 id="description"
+                value={userInfo?.description}
                 multiline={true}
                 rows={4}
                 placeholder="Description"
