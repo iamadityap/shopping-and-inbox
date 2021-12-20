@@ -6,7 +6,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Button, Checkbox, Divider, Grid, ListItemIcon, ListItemText, Menu, MenuItem, Typography } from "@mui/material";
 import { useState } from "react";
 
-function Mail({ isSelected = false, isFlagged = false, onSelect }) {
+function Mail({ isSelected, isFlagged, onSelect, ...message }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const isActionsMenuOpen = Boolean(anchorEl);
 

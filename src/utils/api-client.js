@@ -7,7 +7,8 @@ async function fetchData(url, headers = null) {
     },
   };
 
-  const response = await window.fetch(url, { config });
+  const apiUrl = `http://localhost:9000/${url}`;
+  const response = await window.fetch(apiUrl, { config });
   return response;
 }
 

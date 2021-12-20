@@ -15,7 +15,10 @@ function Inbox() {
     fetchData("url")
       .then((response) => setEmails(response))
       .catch((error) => console.error(error));
-  });
+    return () => {
+      setEmails([]);
+    };
+  }, []);
 
   function handleMessageSelect(event) {
     console.log(event);
@@ -77,7 +80,7 @@ function Inbox() {
 
       <Grid container direction="column" sx={{ mt: 2 }}>
         {emails.length > 0 ? (
-          emails.map((message) => <Mail message={message} isSelected={true} isFlagged={true} onSelect={(event) => handleMessageSelect(event)} />)
+          emails.filter((message) => !message.isDeleted).map((message) => <Mail message={message} onSelect={(event) => handleMessageSelect(event)} />)
         ) : (
           <Typography sx={{ textAlign: "center", p: 1, fontWeight: "medium" }}>Your Inbox is empty.</Typography>
         )}

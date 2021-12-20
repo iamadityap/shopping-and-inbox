@@ -15,30 +15,45 @@ const gridStyles = {
 
 function Shop() {
   const [products, setProducts] = useState([]);
+  const [sortOrder, setSortOrder] = useState(null);
 
   useEffect(() => {
     fetchData("url")
       .then((response) => setProducts(response))
       .catch((error) => console.error(error));
-  });
+    return () => {
+      setProducts([]);
+    };
+  }, []);
 
   function handleSort(sortOrder) {
-    console.log(`sort order ${sortOrder}`);
+    setSortOrder(sortOrder);
+    let items = [];
+
+    if (sortOrder === "low") {
+      items = products.sort((a, b) => {
+        return parseFloat(a.price) - parseFloat(b.price);
+      });
+    } else if (sortOrder === "high") {
+      items = products.sort((a, b) => {
+        return parseFloat(b.price) - parseFloat(a.price);
+      });
+    }
+
+    setProducts(items);
   }
 
-  function handleProceedOrder() {
-    console.log(`handle orders`);
-  }
+  function handleProceedOrder() {}
 
   return (
     <Box sx={{ p: 2 }}>
       <Grid container direction="row" justifyContent="center" alignItems="center" wrap="nowrap">
         <Grid item>
-          <Button variant="outlined" color="secondary" onClick={(event) => handleSort("low")} sx={{ mr: 1 }}>
+          <Button variant={sortOrder === "low" ? "outlined" : "text"} color="secondary" onClick={(event) => handleSort("low")} sx={{ mr: 1 }}>
             Low Price
           </Button>
 
-          <Button variant="outlined" color="secondary" onClick={(event) => handleSort("high")}>
+          <Button variant={sortOrder === "high" ? "outlined" : "text"} color="secondary" onClick={(event) => handleSort("high")}>
             High Price
           </Button>
         </Grid>
