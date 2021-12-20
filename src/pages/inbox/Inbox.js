@@ -2,11 +2,21 @@ import ArchiveIcon from "@mui/icons-material/Archive";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EmailIcon from "@mui/icons-material/Email";
 import FlagIcon from "@mui/icons-material/Flag";
-import { Box, Button, Grid } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 import Mail from "../../components/Mail";
 import SearchInput from "../../components/SearchInput";
+import { fetchData } from "../../utils/api-client";
 
 function Inbox() {
+  const [emails, setEmails] = useState([]);
+
+  useEffect(() => {
+    fetchData("url")
+      .then((response) => setEmails(response))
+      .catch((error) => console.error(error));
+  });
+
   function handleMessageSelect(event) {
     console.log(event);
   }
@@ -66,8 +76,11 @@ function Inbox() {
       </Grid>
 
       <Grid container direction="column" sx={{ mt: 2 }}>
-        <Mail isSelected={true} isFlagged={true} onSelect={(event) => handleMessageSelect(event)} />
-        <Mail isSelected={false} isFlagged={false} onSelect={(event) => handleMessageSelect(event)} />
+        {emails.length > 0 ? (
+          emails.map((message) => <Mail message={message} isSelected={true} isFlagged={true} onSelect={(event) => handleMessageSelect(event)} />)
+        ) : (
+          <Typography sx={{ textAlign: "center", p: 1, fontWeight: "medium" }}>Your Inbox is empty.</Typography>
+        )}
       </Grid>
     </Box>
   );
