@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package.json ./
 COPY package-lock.json ./
-COPY ./ ./
+COPY . .
 
 RUN npm install -g json-server
 RUN npm i

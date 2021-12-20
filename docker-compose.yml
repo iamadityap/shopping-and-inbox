@@ -5,9 +5,10 @@ services:
     build: .
     ports:
       - 9000:9000
-    command: npm run server
     volumes:
       - ./data/db.json:/app/data/db.json
+    container_name: server
+    command: npm run server
 
   shopping:
     build:
@@ -18,5 +19,5 @@ services:
     ports:
       - 3000:3000
     image: shopping-inbox
-    container_name: shopping_and_inbox
+    container_name: client
     command: npm start
