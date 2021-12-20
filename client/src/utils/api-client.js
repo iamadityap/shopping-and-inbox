@@ -7,7 +7,7 @@ async function fetchData(url, headers = null) {
     },
   };
 
-  const apiUrl = `http://localhost:9000/${url}`;
+  const apiUrl = `http://localhost:4200/${url}`;
   const response = await window.fetch(apiUrl, { config });
   return response.json();
 }

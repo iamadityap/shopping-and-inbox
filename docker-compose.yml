@@ -1,26 +1,29 @@
 version: "3.8"
 
 services:
-  json-server:
+  shopping-inbox-server:
     build:
       dockerfile: Dockerfile
-      context: .
-    volumes:
-      - ./data/db.json:/app/data/db.json
-    ports:
-      - 9000:9000
+      context: ./server
     image: shopping-inbox-server
+    restart: always
+    volumes:
+      - ./server/data/db.json:/app/data/db.json
+    ports:
+      - 4200:4200
     container_name: server
-    command: npm run server
+    command: npm start
 
-  shopping:
+  shopping-inbox-client:
     build:
       dockerfile: Dockerfile
-      context: .
+      context: ./client
+    image: shopping-inbox-client
     volumes:
-      - .:/app
+      - ./client:/app/client
+    depends_on:
+      - shopping-inbox-server
     ports:
       - 3000:3000
-    image: shopping-inbox-client
     container_name: client
     command: npm start
