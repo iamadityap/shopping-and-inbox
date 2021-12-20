@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  json-server:
+    build: .
+    ports:
+      - 9000:9000
+    command: npm run server
+    volumes:
+      - ./data/db.json:/app/data/db.json
+
+  shopping:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    image: shopping-inbox
+    container_name: shopping_and_inbox
+    command: npm start
