@@ -18,7 +18,7 @@ function Shop() {
   const [sortOrder, setSortOrder] = useState(null);
 
   useEffect(() => {
-    fetchData("url")
+    fetchData("products")
       .then((response) => setProducts(response))
       .catch((error) => console.error(error));
     return () => {
@@ -76,7 +76,7 @@ function Shop() {
 
       <Box sx={products.length > 0 ? gridStyles : {}}>
         {products.length > 0 ? (
-          products.map((item) => <ProductCard product={item} />)
+          products.map((item) => <ProductCard key={item.productId} product={item} />)
         ) : (
           <Typography sx={{ textAlign: "center", p: 1 }}>There are no products available at present.</Typography>
         )}

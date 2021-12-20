@@ -1,0 +1,79 @@
+{
+  "user": {
+    "id": "cf6bc7e2-ff82-4279-9a99-0b3eaa496ab0",
+    "userProfilePic": "assets/avatar_icon.png",
+    "usernameFull": {
+      "firstName": "Aditya",
+      "lastName": "Pulijala",
+      "fullName": "Aditya Pulijala"
+    },
+    "emailAddress": "imadityap@gmail.com",
+    "description": "I'm a fun loving adventurous guy."
+  },
+  "products": [
+    {
+      "productId": "e302e1c4-fd52-4f5a-88e4-f7e0f919c44a",
+      "productName": "Laptop Asuse 1302",
+      "productImage": "assets/vintage-camera.jpeg",
+      "cpu_model": "CPU 2800 I7 Intel",
+      "ram_model": "RAM 16 GB DDR4",
+      "vga_model": "VGA 3200 6GB",
+      "hdd_model": "HDD 1TB + 256GB SSD",
+      "price": 97000,
+      "addedToCart": false,
+      "inStock": true
+    },
+    {
+      "productId": "83151d57-fb2c-4753-a483-1ebf5804e9d5",
+      "productName": "Laptop Asuse 1302",
+      "productImage": "assets/canon-camera.png",
+      "cpu_model": "CPU 2800 I7 Intel",
+      "ram_model": "RAM 16 GB DDR4",
+      "vga_model": "VGA 3200 6GB",
+      "hdd_model": "HDD 1TB + 256GB SSD",
+      "price": 84000,
+      "addedToCart": false,
+      "inStock": true
+    }
+  ],
+  "messages": [
+    {
+      "messageId": "83a2db46-2e8d-4953-a31c-280626892201",
+      "fromFull": {
+        "email": "brad.gibson@example.com",
+        "name": "Brad Gibson"
+      },
+      "toFull": {
+        "email": "tara.chambers@example.com",
+        "name": "Tara Chambers"
+      },
+      "subject": "Lorem ipsum, dolor",
+      "htmlBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "textBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "messageReceivedDate": "July 15 - 09:32 AM",
+      "isRead": false,
+      "isFlagged": false,
+      "isDeleted": false,
+      "isSelected": false
+    },
+    {
+      "messageId": "d5639137-3219-404f-af19-5a5e46b5c888",
+      "fromFull": {
+        "email": "mauris.magna@protonmail.com",
+        "name": "Vance Bates"
+      },
+      "toFull": {
+        "email": "odio.aliquam@icloud.com",
+        "name": "Lionel Fry"
+      },
+      "subject": "Lorem ipsum, dolor",
+      "htmlBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "textBody": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "messageReceivedDate": "April 10 - 15:32 PM",
+      "isRead": false,
+      "isFlagged": false,
+      "isDeleted": false,
+      "isSelected": false
+    }
+  ]
+}

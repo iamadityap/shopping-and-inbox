@@ -2,7 +2,7 @@ import { Card, CardContent, CardMedia, IconButton, Typography } from "@mui/mater
 import { Box } from "@mui/system";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
-function ProductCard() {
+function ProductCard({ product }) {
   function handleAddToCart(event) {
     console.log(`handle add to cart`);
   }
@@ -10,32 +10,32 @@ function ProductCard() {
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>
-        <CardMedia component="img" height="175" image="assets/vintage-camera.jpeg" alt="Vintage Camera"></CardMedia>
+        <CardMedia component="img" height="175" image={product.productImage} alt="Vintage Camera"></CardMedia>
         <CardContent>
           <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-              Laptop Asuse 1302
+              {product.productName}
             </Typography>
 
             <Typography variant="body1" sx={{ color: "red", ml: 2 }}>
-              97000Yen
+              {product.price}Yen
             </Typography>
           </Box>
 
           <Typography variant="body2" sx={{ mt: 1 }}>
-            CPU 2800 I7 Intel
+            {product.cpu_model}
           </Typography>
 
           <Typography variant="body2" sx={{ mt: 1 }}>
-            RAM 16 GB DDR4
+            {product.ram_model}
           </Typography>
 
           <Typography variant="body2" sx={{ mt: 1 }}>
-            VGA 3200 6GB
+            {product.vga_model}
           </Typography>
 
           <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <Typography variant="body2">HDD 1TB + 256GB SSD</Typography>
+            <Typography variant="body2">{product.hdd_model}</Typography>
 
             <IconButton aria-label="add to cart" color="inherit" sx={{ ml: 4 }} onClick={(event) => handleAddToCart()}>
               <AddShoppingCartIcon />

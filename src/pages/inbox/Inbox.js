@@ -12,7 +12,7 @@ function Inbox() {
   const [emails, setEmails] = useState([]);
 
   useEffect(() => {
-    fetchData("url")
+    fetchData("messages")
       .then((response) => setEmails(response))
       .catch((error) => console.error(error));
     return () => {
@@ -20,25 +20,56 @@ function Inbox() {
     };
   }, []);
 
-  function handleMessageSelect(event) {
-    console.log(event);
-  }
-
   function handleNewMessage(event) {
     console.log(`perform new message action`);
   }
 
-  function handleDeleteAction(event) {
-    console.log(`perform group delete action on selected e-mail list`);
+  function handleMessageSelect(event, messageId) {
+    const message = emails.map((item) => {
+      if (item.messageId === messageId) item.isSelected = !item.isSelected;
+      return item;
+    });
+
+    setEmails(message);
   }
 
-  function handleFlagAction(event) {
-    console.log(`perform group flag action on selected e-mail list`);
+  function handleMessageFlag(event, messageId) {
+    const message = emails.map((item) => {
+      if (item.messageId === messageId) item.isFlagged = !item.isFlagged;
+      return item;
+    });
+
+    setEmails(message);
   }
 
-  function handleArchiveAction(event) {
-    console.log(`perform group archive action on selected e-mail list`);
+  function handleMessageDelete(event, messageId) {
+    const message = emails.map((item) => {
+      if (item.messageId === messageId) item.isDeleted = !item.isDeleted;
+      return item;
+    });
+
+    setEmails(message);
   }
+
+  function handleGroupFlagAction(event) {
+    const message = emails.map((item) => {
+      if (item.isSelected) item.isFlagged = !item.isFlagged;
+      return item;
+    });
+
+    setEmails(message);
+  }
+
+  function handleGroupDeleteAction(event) {
+    const message = emails.map((item) => {
+      if (item.isSelected) item.isDeleted = !item.isDeleted;
+      return item;
+    });
+
+    setEmails(message);
+  }
+
+  function handleGroupArchiveAction(event) {}
 
   return (
     <Box sx={{ p: 2 }}>
@@ -58,12 +89,17 @@ function Inbox() {
             variant="text"
             sx={{ color: "black", mr: 2 }}
             endIcon={<DeleteIcon sx={{ p: 0.5 }} />}
-            onClick={(event) => handleDeleteAction(event)}
+            onClick={(event) => handleGroupDeleteAction(event)}
           >
             Delete
           </Button>
 
-          <Button variant="text" sx={{ color: "black", mr: 2 }} endIcon={<FlagIcon sx={{ p: 0.5 }} />} onClick={(event) => handleFlagAction(event)}>
+          <Button
+            variant="text"
+            sx={{ color: "black", mr: 2 }}
+            endIcon={<FlagIcon sx={{ p: 0.5 }} />}
+            onClick={(event) => handleGroupFlagAction(event)}
+          >
             Flag
           </Button>
 
@@ -71,7 +107,7 @@ function Inbox() {
             variant="text"
             sx={{ color: "black", mr: 2 }}
             endIcon={<ArchiveIcon sx={{ p: 0.5 }} />}
-            onClick={(event) => handleArchiveAction(event)}
+            onClick={(event) => handleGroupArchiveAction(event)}
           >
             Archive
           </Button>
@@ -80,7 +116,17 @@ function Inbox() {
 
       <Grid container direction="column" sx={{ mt: 2 }}>
         {emails.length > 0 ? (
-          emails.filter((message) => !message.isDeleted).map((message) => <Mail message={message} onSelect={(event) => handleMessageSelect(event)} />)
+          emails
+            .filter((message) => !message.isDeleted)
+            .map((message) => (
+              <Mail
+                key={message.messageId}
+                message={message}
+                onSelect={(event, message) => handleMessageSelect(event, message)}
+                onFlag={(event, message) => handleMessageFlag(event, message)}
+                onDelete={(event, message) => handleMessageDelete(event, message)}
+              />
+            ))
         ) : (
           <Typography sx={{ textAlign: "center", p: 1, fontWeight: "medium" }}>Your Inbox is empty.</Typography>
         )}
