@@ -26,4 +26,4 @@ services:
     ports:
       - 3000:3000
     container_name: client
-    command: npm start
+    command: npm run build
